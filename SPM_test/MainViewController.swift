@@ -38,6 +38,11 @@ class MainViewController: UIViewController {
         }
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        setupGradientLayer()  // 確保每次view的布局發生變化時，漸層的大小和位置都會被更新
+    }
+    
     func setupUI() {
         lbText.alpha = 0
         lbText.translatesAutoresizingMaskIntoConstraints = false
@@ -72,10 +77,7 @@ class MainViewController: UIViewController {
         gradientLayer.frame = lbText.bounds
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        setupGradientLayer()  // 確保每次view的布局發生變化時，漸層的大小和位置都會被更新
-    }
+    
 }
 
 
