@@ -22,6 +22,8 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("haha")
+        print("haha")
+        print("haha")
         // 對imgHeart和imgFace進行動畫
         UIView.animate(withDuration: 1.5, animations: {
             self.imgHeart.alpha = 1
